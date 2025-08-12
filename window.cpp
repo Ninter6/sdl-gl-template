@@ -24,7 +24,7 @@ Window::Window(int width, int height, std::string_view title, bool logic_size) {
     // Create window
     int logic_width = width, logic_height  = height;
     if (!logic_size)
-        calculateWindowSize(1200, 900,
+        calculateWindowSize(width, height,
                             SDL_GetPrimaryDisplay(),
                             logic_width, logic_height);
     _window = SDL_CreateWindow("SDL GL Template",
